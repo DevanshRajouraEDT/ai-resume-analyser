@@ -1,103 +1,92 @@
-# 🤖 AI Resume Analyser
+# AI Resume Analyser
 
-A beginner-friendly Python project that uses **Google Gemini AI** to analyse a resume PDF and give detailed feedback.
-
----
-
-## 📁 Project Structure
-
-```
-ai_resume_analyser/
-│
-├── resume_analyser.py     ← Main Python script (the brain)
-├── requirements.txt       ← List of libraries to install
-└── README.md              ← This file
-```
+A Python tool that reads your resume as a PDF and uses AI to give you detailed, honest feedback on it — what's good, what's missing, and exactly how to improve it.
 
 ---
 
-## ⚙️ Setup Instructions
+## What it does
 
-### 1. Make sure Python is installed
+You give it your resume PDF, it reads the text, sends it to an AI, and prints back a full breakdown covering:
+
+- Overall score out of 10
+- Strengths
+- Things to improve
+- Missing sections
+- Formatting and readability
+- Keywords (including ATS keywords)
+- Top 3 things to fix right now
+
+---
+
+## Tech used
+
+| Tool | Purpose |
+|------|---------|
+| Python | Core language |
+| pypdf | Reading and extracting text from PDF files |
+| Groq API | Running the LLaMA 3 AI model (free) |
+
+---
+
+## Setup
+
+**1. Clone the repo**
 ```bash
-python --version
-# Should show Python 3.8 or higher
+git clone https://github.com/DevanshRajouraEDT/ai-resume-analyser.git
+cd ai-resume-analyser
 ```
 
-### 2. Install the required libraries
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Get a FREE Google Gemini API Key
-- Go to: https://aistudio.google.com/app/apikey
-- Sign in with your Google account
-- Click "Create API Key"
-- Copy the key
+**3. Get a free Groq API key**
+- Go to https://console.groq.com
+- Sign up and create an API key (free, no billing needed)
 
-### 4. Run the program
+**4. Run it**
 ```bash
 python resume_analyser.py
 ```
 
----
-
-## 🚀 How to Use
-
-1. Run the script
-2. Enter the full path to your resume PDF
-3. Paste your Gemini API key (or set it as an environment variable)
-4. Wait a few seconds for the AI to analyse
-5. Read the feedback and optionally save it to a file
+The program will ask for your resume path and API key, then print the full analysis.
 
 ---
 
-## 🧠 What the AI Analyses
+## Example output
 
-- Overall score out of 10
-- Strengths of the resume
-- Weaknesses and areas to improve
-- Missing sections (skills, summary, projects, etc.)
-- Formatting and readability
-- Keyword analysis
-- Top 3 action tips
-
----
-
-## 🔐 Pro Tip: Set API Key as Environment Variable
-
-Instead of pasting the key every time, you can set it once:
-
-**Windows:**
-```cmd
-set GEMINI_API_KEY=your_key_here
 ```
+[*] Found your resume: my_resume.pdf
+[*] Pages found: 1
+[*] Successfully read 3788 characters of text.
 
-**Mac/Linux:**
-```bash
-export GEMINI_API_KEY=your_key_here
+[*] Sending your resume to the AI...
+
+============================================================
+           HERE'S YOUR RESUME FEEDBACK
+============================================================
+
+1. OVERALL SCORE: 7/10
+   ...
+
+2. STRENGTHS
+   ...
 ```
 
 ---
 
-## 📚 Libraries Used
+## Project structure
 
-| Library | Purpose |
-|---------|---------|
-| `pypdf` | Read and extract text from PDF files |
-| `google-generativeai` | Connect to Google Gemini AI |
-| `os` | Work with files and environment variables (built-in) |
-| `sys` | Exit the program cleanly on errors (built-in) |
-
----
-
-## 💡 Ideas to Extend This Project
-
-- Add a web interface using Flask
-- Support multiple resume formats (DOCX, TXT)
-- Compare resume to a job description
-- Score resume against ATS (Applicant Tracking Systems)
+```
+ai-resume-analyser/
+├── resume_analyser.py    # main script
+├── requirements.txt      # dependencies
+└── README.md
+```
 
 ---
 
-*Built with Python for Scaler School of Technology Portfolio*
+## Author
+
+Devansh Rajoura
