@@ -1,0 +1,6 @@
+# Requirements for AI Resume Analyser
+# Install all of these by running:
+#   pip install -r requirements.txt
+
+pypdf==4.3.1
+groq
