@@ -1,5 +1,6 @@
 # AI Resume Analyser
 
+###THIS IS A VIBECODED PROJECT, WITH HELP OF GPT AND CLAUDE
 A Python tool that reads your resume as a PDF and uses AI to give you detailed, honest feedback on it — what's good, what's missing, and exactly how to improve it.
 
 ---
